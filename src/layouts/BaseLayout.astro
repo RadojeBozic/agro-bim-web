@@ -4,6 +4,7 @@ import "../styles/global.css";
 interface Props { title: string; description: string; }
 const { title, description } = Astro.props;
 const canonicalUrl = "https://agro-bim.com/";
+const socialImageUrl = "https://agro-bim.com/images/hero/zetva.webp";
 ---
 <!doctype html>
 <html lang="sr-Latn" class="scroll-smooth">
@@ -13,13 +14,22 @@ const canonicalUrl = "https://agro-bim.com/";
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/images/brand/agro-bim-logo.png" />
+    <link rel="apple-touch-icon" href="/images/brand/agro-bim-logo.png" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sr_RS" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1792" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Kombajn u žetvi pšenice — Agro BiM" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-[#f5f7f1] text-[#17231b] antialiased"><slot /></body>

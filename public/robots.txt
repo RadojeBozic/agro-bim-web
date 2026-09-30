@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agro-bim.com/sitemap-index.xml
