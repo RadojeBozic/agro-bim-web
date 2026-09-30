@@ -1,0 +1,13 @@
+---
+const groups = [
+  ["Obnova gazdinstva i promena setvene strukture", [["1–10 ha","500 RSD"],["10–30 ha","1.000 RSD"],["preko 30 ha","1.500 RSD"]]],
+  ["Podnošenje zahteva za podsticaje u biljnoj proizvodnji, po hektaru", [["1–10 ha","500 RSD"],["10–30 ha","1.000 RSD"],["preko 30 ha","2.000 RSD"]]],
+  ["Podnošenje zahteva za podsticaje za sertifikovano seme", [["1 ha","1.000 RSD"]]],
+  ["Prihvatanje rešenja i odricanje od žalbe", [["po zahtevu","500 RSD"]]],
+  ["Podnošenje zahteva za refrakciju akciza za gorivo", [["po računu","100 RSD"]]],
+  ["Podnošenje zahteva za premiju za mleko (II kvartal)", [["po litri","10 RSD"]]],
+  ["Podnošenje zahteva za podsticaje u stočarstvu", [["Tov junadi","1.000 RSD / komad"],["Muzne krave","2.500 RSD / komad"],["Tovni bikovi i krave","2.500 RSD / komad"],["Priplodne krmače i nerastovi","1.500 RSD / komad"],["Priplodne ovce, koze i jarčevi","500 RSD / komad"],["Tov krmača","300 RSD / komad"],["Tov svinja","150 RSD / komad"],["Tov ovaca","300 RSD / komad"],["Tov jagnjadi i jaradi","300 RSD / komad"]]],
+  ["Podnošenje zahteva za podsticaje u stočarstvu, po košnici pčela", [["po košnici","50 RSD"]]],
+] as [string, string[][]][];
+---
+<section id="cenovnik" class="section-pad bg-sand"><div class="shell"><div class="max-w-2xl"><p class="eyebrow">Cenovnik</p><h2 class="mt-3 text-4xl md:text-5xl">Cenovnik usluga</h2></div><div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{groups.map(([service, rows], i) => <article class:list={["flex flex-col rounded-2xl border border-line bg-white p-6 md:p-7", i === 6 && "md:col-span-2 lg:col-span-3"]}><h3 class="text-lg leading-snug">{service}</h3><ul class:list={["mt-4 flex-1", i === 6 ? "grid gap-x-10 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3" : "space-y-2.5"]}>{rows.map(([label,price]) => <li class="flex items-baseline justify-between gap-3 text-sm"><span class="text-muted-ink">{label}</span><strong class="whitespace-nowrap">{price}</strong></li>)}</ul></article>)}</div><div class="mt-8 max-w-2xl text-sm leading-6 text-muted-ink"><p>Tačna cena može zavisiti od obima dokumentacije i konkretne usluge.</p><p class="mt-1">Cenovnik važi od 02.07.2025.</p></div></div></section>

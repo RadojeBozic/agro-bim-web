@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+const canonicalUrl = "https://agro-bim.com/";
+---
+<!doctype html>
+<html lang="sr-Latn" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-[#f5f7f1] text-[#17231b] antialiased"><slot /></body>
+</html>

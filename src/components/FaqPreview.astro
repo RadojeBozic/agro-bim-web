@@ -1,0 +1,10 @@
+---
+const faqs = [
+  ["Kako se registruje poljoprivredno gazdinstvo?", "Postupak i potrebna dokumentacija zavise od važećih pravila i konkretnog slučaja. Pre početka proveravamo aktuelne zahteve nadležnih institucija."],
+  ["Kako da saznam za aktuelne podsticaje i javne pozive?", "Aktuelne mogućnosti pratimo kroz zvanične izvore i objavljujemo ih na Agro BiM Digital platformi. Uslove i rokove uvek treba proveriti u izvornom javnom pozivu."],
+  ["Koja dokumentacija se najčešće traži?", "Spisak zavisi od programa i vrste ulaganja. Najčešće obuhvata podatke o gazdinstvu i dokumentaciju navedenu u konkretnom pozivu."],
+  ["Da li se može konkurisati za više različitih podsticaja?", "Mogućnost kombinovanja zavisi od uslova svakog poziva i namene troškova. Zato se svaki slučaj proverava prema važećoj dokumentaciji."],
+  ["Kako mogu da zakažem konsultaciju?", "Možete nas pozvati telefonom ili poslati poruku e-poštom koristeći kontakt podatke u nastavku stranice."],
+];
+---
+<section class="section-pad" aria-labelledby="faq-title"><div class="shell grid gap-12 lg:grid-cols-[22rem_1fr]"><div><p class="eyebrow">Česta pitanja</p><h2 id="faq-title" class="mt-3 text-4xl md:text-5xl">Pitanja koja najčešće čujemo</h2><p class="mt-4 leading-7 text-muted-ink">Odgovore i vodiče objavljujemo uz proveru važećih pravila i zvaničnih izvora.</p></div><div class="border-y border-line">{faqs.map(([question,answer], i) => <details class="group border-b border-line last:border-b-0" open={i === 0}><summary class="focus-ring flex cursor-pointer list-none items-center justify-between gap-6 py-5"><h3 class="text-lg">{question}</h3><span class="grid size-8 shrink-0 place-items-center rounded-full bg-sand text-xl text-olive before:content-['+'] group-open:before:content-['−']"></span></summary><p class="-mt-1 max-w-3xl pb-6 pr-12 leading-7 text-muted-ink">{answer}</p></details>)}</div></div></section>
